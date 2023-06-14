@@ -15,6 +15,14 @@ body {
   justify-content: space-around;
 }
 
+p{
+  text-align: center;
+}
+
+#title{
+  width: 550px;
+}
+
 h1 {
   left: 100px;
   top: 50px;
@@ -89,12 +97,21 @@ h1 {
   margin: 10px;
 }
 
-#result > p {
+#result {
   z-index: 10;
   font-size: 60px;
   position: absolute;
   display: flexbox;
-  left: 170px;
-  top: 120px;
+  left: 120px;
+  top: 130px;
   transform: rotate(5deg);
+  text-align: center;
 }
+
+#aaa {
+  z-index:3;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+

@@ -3,35 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roulette Page</title>
+  <title>오늘의 밥이 고민되는 당신을 위한 웹!</title>
   <!-- css 연결 링크 -->
   <link rel="stylesheet" href="roulette.css">
 </head>
 <body>
   <div class="background">
-    <img src="img/background.png" alt="" id="aa">
+    <img src="img/background.png" id="aa">
     <div id="inContent">
-      <h1 id="title">Title</h1>
+      <h1 id="title"></h1>
       <div id="button1">
-        <button type="button" onclick=makeAlert()>
+        <button type="button" onclick=randomFood()>
           <img src="img/gong.png" id="buttonImg">
         </button>
-        <p class="forButton">button1</p>
+        <p class="forButton">뽑기</p>
         </form>
       </div>
       <div id="button2">
         <button type="button" onclick="location.href='index.html'">
           <img src="img/gong.png" id="buttonImg">
         </button>
-        <p class="forButton">button2</p>
+        <p class="forButton">돌아가기</p>
         </form>
       </div>
     </div>
-    <div id="result">
-      <p>result</p>
+    <div>
+      <p id="result">나올 메뉴는?</p>
     </div>
+    <form id="aaa">
+      <p>종류 선택</p>
+      <input type="radio" name="select" value="1">
+      <label for="html">특식</label><br>
+      <input type="radio" name="select" value="2">
+      <label for="html">찌개</label><br>
+      <input type="radio" name="select" value="3">
+      <label for="html">덮밥/볶음</label><br>
+      <input type="radio" name="select" value="4">
+      <label for="html">면</label><br>
+      <input type="radio" name="select" value="5">
+      <label for="html">국/탕</label><br>
+      <input type="radio" name="select" value="6">
+      <label for="html">간편식</label><br>
+      <input type="radio" name="select" value="7">
+      <label for="html">해장</label><br>
+    </form>
   </div>
   <!-- 스크립트 -->
-  <script src="jsTest.js"></script>
+  <script src="01.js"></script>
 </body>
 </html>
