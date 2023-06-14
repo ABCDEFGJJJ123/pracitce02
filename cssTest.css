@@ -16,6 +16,7 @@ body {
 }
 
 p{
+  color: black;
   text-align: center;
 }
 
@@ -24,6 +25,7 @@ p{
 }
 
 h1 {
+  color: black;
   left: 100px;
   top: 50px;
   position: absolute;
