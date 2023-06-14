@@ -5,6 +5,7 @@
 
 /* 폰트 적용 */
 body {
+  color: black;
   font-family: 'neon';
   margin: 0;
   background-color: rgb(40, 44, 52);
@@ -19,13 +20,6 @@ h1 {
   top: 50px;
   position: absolute;
 }
-
-/* .background >#img {
-  width: 1920px;
-  height: 937px;  
-  background-image: url(img/background.png);
-} */
-
 #aa {
   z-index: 0;
   width: 100%;
@@ -41,6 +35,7 @@ h1 {
 }
 
 #button1 {
+  color: black;
   z-index: 4;
   width: 200px;
   height: 200px;
@@ -58,6 +53,7 @@ h1 {
 }
 
 #button2 {
+  color: black;
   width: 200px;
   height: 200px;
   padding: 0;
@@ -76,8 +72,6 @@ h1 {
   width: 150px;
   height: 150px;
   margin: 0;
-  /* background-image: url(img/gong.png);
-  object-fit: cover; */
 }
 
 .forButton {
