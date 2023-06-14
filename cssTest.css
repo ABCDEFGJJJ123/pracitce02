@@ -15,6 +15,14 @@ body {
   justify-content: space-around;
 }
 
+p{
+  text-align: center;
+}
+
+#title{
+  width: 550px;
+}
+
 h1 {
   left: 100px;
   top: 50px;
