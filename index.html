@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roulette Page</title>
+  <title>Main Page</title>
   <!-- css 연결 링크 -->
-  <link rel="stylesheet" href="roulette.css">
+  <link rel="stylesheet" href="cssTest.css">
 </head>
 <body>
   <div class="background">
@@ -13,25 +13,22 @@
     <div id="inContent">
       <h1 id="title">Title</h1>
       <div id="button1">
-        <button type="button" onclick=makeAlert()>
+        <button type="button" onclick="location.href='roulette.html'">
           <img src="img/gong.png" id="buttonImg">
         </button>
         <p class="forButton">button1</p>
         </form>
       </div>
       <div id="button2">
-        <button type="button" onclick="location.href='index.html'">
+        <button type="button" onclick=makeAlert()>
           <img src="img/gong.png" id="buttonImg">
         </button>
         <p class="forButton">button2</p>
         </form>
       </div>
     </div>
-    <div id="result">
-      <p>result</p>
-    </div>
   </div>
-  <!-- 스크립트 -->
+<!-- 스크립트 -->
   <script src="jsTest.js"></script>
 </body>
 </html>
