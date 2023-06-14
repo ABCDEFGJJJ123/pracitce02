@@ -14,8 +14,7 @@ let select = ['랜덤', '메뉴 고르기', '종료'];
 
 let randFoodType = 0;
 let rand1 = 0;
-
-
+let i = 0;
 
 let readline = require('readline');
 
@@ -98,6 +97,7 @@ let choiceTeuksik = function() //특식
   console.log(teuksik);
   rl.question(" 중에 선택해주세요. \n '메인화면'을 입력하시면 메인화면으로 돌아갑니다. '종료'를 입력하시면 종료됩니다.\n", function(userInput)
   {
+
     if (userInput == '종료')
     {
       return rl.close();
@@ -108,35 +108,22 @@ let choiceTeuksik = function() //특식
       choiceMainLoop();
     }
     
-
     else if(userInput == teuksik[0])
+    {
       console.log("오늘의 메뉴는 ", teuksik[0], " 입니다.");
+    }
+    else if (!(userInput == teuksik[i]))
+    {
+      for (let i = 1; i < 10; i++)
+      {
+        if (userInput == teuksik[i])
+        {
+          console.log("오늘의 메뉴는 ", teuksik[i], " 입니다.");
+        }
+      }
+    }
     
-    else if(userInput == teuksik[1])
-      console.log("오늘의 메뉴는 ", teuksik[1], " 입니다.");
-
-    else if(userInput == teuksik[2])
-      console.log("오늘의 메뉴는 ", teuksik[2], " 입니다.");
-
-    else if(userInput == teuksik[3])
-      console.log("오늘의 메뉴는 ", teuksik[3], " 입니다.");
-
-    else if(userInput == teuksik[4])
-      console.log("오늘의 메뉴는 ", teuksik[4], " 입니다.");
-
-    else if(userInput == teuksik[5])
-      console.log("오늘의 메뉴는 ", teuksik[5], " 입니다.");
-
-    else if(userInput == teuksik[6])
-      console.log("오늘의 메뉴는 ", teuksik[6], " 입니다.");
-
-    else if(userInput == teuksik[7])
-      console.log("오늘의 메뉴는 ", teuksik[7], " 입니다.");
-
-    else if(userInput == teuksik[8])
-      console.log("오늘의 메뉴는 ", teuksik[8], " 입니다.");
-
-    else
+    else 
     {
       console.log("다시 입력해주세요.");
       choiceTeuksik();
@@ -165,30 +152,17 @@ let choiceJjigae = function() //찌개
 
     else if(userInput == jjigae[0])
       console.log("오늘의 메뉴는 ", jjigae[0], " 입니다.");
-
-    else if(userInput == jjigae[1])
-      console.log("오늘의 메뉴는 ", jjigae[1], " 입니다.");
-      
-    else if(userInput == jjigae[2])
-      console.log("오늘의 메뉴는 ", jjigae[2], " 입니다.");
-      
-    else if(userInput == jjigae[3])
-      console.log("오늘의 메뉴는 ", jjigae[3], " 입니다.");
-      
-    else if(userInput == jjigae[4])
-      console.log("오늘의 메뉴는 ", jjigae[4], " 입니다.");
-      
-    else if(userInput == jjigae[5])
-      console.log("오늘의 메뉴는 ", jjigae[5], " 입니다.");
-      
-    else if(userInput == jjigae[6])
-      console.log("오늘의 메뉴는 ", jjigae[6], " 입니다.");
-      
-    else if(userInput == jjigae[7])
-      console.log("오늘의 메뉴는 ", jjigae[7], " 입니다.");
-      
-    else if(userInput == jjigae[8])
-      console.log("오늘의 메뉴는 ", jjigae[8], " 입니다.");
+    
+    else if (!(userInput == jjigae[i]))
+    {
+      for (let i = 1; i < 10; i++)
+      {
+        if (userInput == jjigae[i])
+        {
+          console.log("오늘의 메뉴는 ", jjigae[i], " 입니다.");
+        }
+      }
+    }
       
     else
     {
@@ -219,29 +193,16 @@ let choiceBap = function() //덮밥/볶음밥
     else if(userInput == bap[0])
       console.log("오늘의 메뉴는 ", bap[0], " 입니다.");
     
-    else if(userInput == bap[1])
-      console.log("오늘의 메뉴는 ", bap[1], " 입니다.");
-    
-    else if(userInput == bap[2])
-      console.log("오늘의 메뉴는 ", bap[2], " 입니다.");
-
-    else if(userInput == bap[3])
-      console.log("오늘의 메뉴는 ", bap[3], " 입니다.");
-
-    else if(userInput == bap[4])
-      console.log("오늘의 메뉴는 ", bap[4], " 입니다.");
-
-    else if(userInput == bap[5])
-      console.log("오늘의 메뉴는 ", bap[5], " 입니다.");
-
-    else if(userInput == bap[6])
-      console.log("오늘의 메뉴는 ", bap[6], " 입니다.");
-
-    else if(userInput == bap[7])
-      console.log("오늘의 메뉴는 ", bap[7], " 입니다.");
-
-    else if(userInput == bap[8])
-      console.log("오늘의 메뉴는 ", bap[8], " 입니다.");
+    else if (!(userInput == bap[i]))
+    {
+      for (let i = 1; i < 10; i++)
+      {
+        if (userInput == bap[i])
+        {
+          console.log("오늘의 메뉴는 ", bap[i], " 입니다.");
+        }
+      }
+    }
 
     else
     {
@@ -269,41 +230,19 @@ let choiceMyeon = function() //면
       choiceMainLoop();
     }
 
-    else if (userInput == myeon[0])
-      console.log("오늘의 메뉴는", myeon[0], " 입니다.");
-
-    else if (userInput == myeon[1])
-      console.log("오늘의 메뉴는", myeon[1], " 입니다.");
-
-    else if (userInput == myeon[2])
-      console.log("오늘의 메뉴는", myeon[2], " 입니다.");
-
-    else if (userInput == myeon[3])
-      console.log("오늘의 메뉴는", myeon[3], " 입니다.");
-
-    else if (userInput == myeon[4])
-      console.log("오늘의 메뉴는", myeon[4], " 입니다.");
-
-    else if (userInput == myeon[5])
-      console.log("오늘의 메뉴는", myeon[5], " 입니다.");
-
-    else if (userInput == myeon[6])
-      console.log("오늘의 메뉴는", myeon[6], " 입니다.");
-
-    else if (userInput == myeon[7])
-      console.log("오늘의 메뉴는", myeon[7], " 입니다.");
-
-    else if (userInput == myeon[8])
-      console.log("오늘의 메뉴는", myeon[8], " 입니다.");
-
-    else if (userInput == myeon[9])
-      console.log("오늘의 메뉴는", myeon[9], " 입니다.");
-
-    else if (userInput == myeon[10])
-      console.log("오늘의 메뉴는", myeon[10], " 입니다.");
-
-    else if (userInput == myeon[11])
-      console.log("오늘의 메뉴는", myeon[11], " 입니다.");
+    else if(userInput == myeon[0])
+      console.log("오늘의 메뉴는 ", myeon[0], " 입니다.");
+    
+    else if (!(userInput == jjigae[i]))
+    {
+      for (let i = 1; i < 13; i++)
+      {
+        if (userInput == myeon[i])
+        {
+          console.log("오늘의 메뉴는 ", myeon[i], " 입니다.");
+        }
+      }
+    }
 
 
     else
@@ -333,31 +272,18 @@ let choiceGukTang = function() //국/탕
     }
 
     else if(userInput == gukTang[0])
-      console.log("오늘의 메뉴는", gukTang[0], " 입니다.");
-
-    else if(userInput == gukTang[1])
-      console.log("오늘의 메뉴는", gukTang[1], " 입니다.");
-
-    else if(userInput == gukTang[2])
-      console.log("오늘의 메뉴는", gukTang[2], " 입니다.");
-
-    else if(userInput == gukTang[3])
-      console.log("오늘의 메뉴는", gukTang[3], " 입니다.");
-
-    else if(userInput == gukTang[4])
-      console.log("오늘의 메뉴는", gukTang[4], " 입니다.");
-
-    else if(userInput == gukTang[5])
-      console.log("오늘의 메뉴는", gukTang[5], " 입니다.");
-
-    else if(userInput == gukTang[6])
-      console.log("오늘의 메뉴는", gukTang[6], " 입니다.");
-
-    else if(userInput == gukTang[7])
-      console.log("오늘의 메뉴는", gukTang[7], " 입니다.");
-
-    else if(userInput == gukTang[8])
-      console.log("오늘의 메뉴는", gukTang[8], " 입니다.");
+      console.log("오늘의 메뉴는 ", gukTang[0], " 입니다.");
+    
+    else if (!(userInput == jjigae[i]))
+    {
+      for (let i = 1; i < 10; i++)
+      {
+        if (userInput == gukTang[i])
+        {
+          console.log("오늘의 메뉴는 ", gukTang[i], " 입니다.");
+        }
+      }
+    }
 
     else
     {
@@ -385,35 +311,19 @@ let choiceTvDinner = function() //간편식
       choiceMainLoop();
     }
 
-    else if (userInput == tvDinner[0])
+    else if(userInput == tvDinner[0])
       console.log("오늘의 메뉴는 ", tvDinner[0], " 입니다.");
-
-    else if (userInput == tvDinner[1])
-      console.log("오늘의 메뉴는 ", tvDinner[1], " 입니다.");
-
-    else if (userInput == tvDinner[2])
-      console.log("오늘의 메뉴는 ", tvDinner[2], " 입니다.");
-
-    else if (userInput == tvDinner[3])
-      console.log("오늘의 메뉴는 ", tvDinner[3], " 입니다.");
-
-    else if (userInput == tvDinner[4])
-      console.log("오늘의 메뉴는 ", tvDinner[4], " 입니다.");
-
-    else if (userInput == tvDinner[5])
-      console.log("오늘의 메뉴는 ", tvDinner[5], " 입니다.");
-
-    else if (userInput == tvDinner[6])
-      console.log("오늘의 메뉴는 ", tvDinner[6], " 입니다.");
-
-    else if (userInput == tvDinner[7])
-      console.log("오늘의 메뉴는 ", tvDinner[7], " 입니다.");
-
-    else if (userInput == tvDinner[8])
-      console.log("오늘의 메뉴는 ", tvDinner[8], " 입니다.");
-
-    else if (userInput == tvDinner[9])
-      console.log("오늘의 메뉴는 ", tvDinner[9], " 입니다.");
+    
+    else if (!(userInput == tvDinner[i]))
+    {
+      for (let i = 1; i < 11; i++)
+      {
+        if (userInput == tvDinner[i])
+        {
+          console.log("오늘의 메뉴는 ", tvDinner[i], " 입니다.");
+        }
+      }
+    }
 
     else
     {
@@ -443,27 +353,17 @@ let choiceHangoverFood = function() //해장
 
     else if(userInput == hangoverFood[0])
       console.log("오늘의 메뉴는 ", hangoverFood[0], " 입니다.");
-
-    else if(userInput == hangoverFood[1])
-      console.log("오늘의 메뉴는 ", hangoverFood[1], " 입니다.");
-
-    else if(userInput == hangoverFood[2])
-      console.log("오늘의 메뉴는 ", hangoverFood[2], " 입니다.");
-
-    else if(userInput == hangoverFood[3])
-      console.log("오늘의 메뉴는 ", hangoverFood[3], " 입니다.");
-
-    else if(userInput == hangoverFood[4])
-      console.log("오늘의 메뉴는 ", hangoverFood[4], " 입니다.");
-
-    else if(userInput == hangoverFood[5])
-      console.log("오늘의 메뉴는 ", hangoverFood[5], " 입니다.");
-
-    else if(userInput == hangoverFood[6])
-      console.log("오늘의 메뉴는 ", hangoverFood[6], " 입니다.");
-
-    else if(userInput == hangoverFood[7])
-      console.log("오늘의 메뉴는 ", hangoverFood[7], " 입니다.");
+    
+    else if (!(userInput == jjigae[i]))
+    {
+      for (let i = 1; i < 8; i++)
+      {
+        if (userInput == hangoverFood[i])
+        {
+          console.log("오늘의 메뉴는 ", hangoverFood[i], " 입니다.");
+        }
+      }
+    }
       
     else
     {
